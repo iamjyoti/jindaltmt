@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Contact</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+      <script src="plugins/jquery-1.10.2.min.js"></script>
+
+    <script src="plugins/main.js"></script>
+    <script src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript" src="plugins/monaca.viewport.js"></script>
+
+
+    <script src="js/modernizr.js"></script>
+      <script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+      <script src="js/order.js"></script>
+      <script src="js/validation.js"></script>
+      <script src="js/number.js"></script>
+
+      <style>
+
+#frm1{
+margin: 10px;
+}
+input[type=text]{
+
+width:100%;
+
+}
+input[type=submit]
+{
+margin-bottom: 20px;
+width:100%;
+padding: 15px;
+background-color: #4180C5;
+color: aliceblue;
+font-size:15px;
+cursor:pointer;
+}
+#submit:hover
+{
+background-color: black;
+}
+textarea{
+width:100%;
+padding: 15px;
+margin-top: 10px;
+border:1px solid #7ac9b7;
+border-radius:5px;
+margin-bottom: 20px;
+resize:none;
+}
+input[type=text]:focus,textarea:focus {
+border-color: #4697e4;
+}
+
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+          .loading_spinner {display:none; margin:0 auto 0 auto; width:128px;}
+.loading_spinner_all {display:none; margin:600px auto 0 auto; width:128px;}
+.loading_txt {font-family: oswald-light; font-size:48px; font-weight:bold; color:#261d1d; margin-top:20px; text-align:center;}
+
+      </style>
+
+  </head>
+
+  <body>
+
+
+<div class="navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="backBtn"  id="backButton" href="#"></a>
+            <a class="navbar-brand" id="backButton" href="#">
+                <img  alt="Brand" src="img/header_image.png">
+                    </a>
+            <div id="title-bottom"></div>
+        </div>
+        
+    </div>
+</div>
+
+
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>Give us a feedback</h3>
+			</div>
+	    </div>
+	</div>
+
+
+
+
+<div class="container" style="background-color:white">
+         <br/>
+	 	<div class="row">
+           <div class="col-lg-6">
+
+      <form id="mail_form" role="form">
+
+
+<h4>Talk to us</h4>
+		 			<div class="hline"></div>
+					  <div class="form-group">
+					    <label for="name">Name</label>
+					    <input type="text" name="name" id="name"  class="form-control" >
+					  </div>
+                      <div class="form-group">
+					    <label for="company_name">Organization</label>
+					    <input type="text" name="company_name" id="company_name"  class="form-control" >
+					  </div>
+					  <div class="form-group">
+					    <label for="email">Email</label>
+					    <input type="email" name="email" id="email" onChange="validate_email()" class="form-control" ><span id="email_span"></span>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="phone">Phone</label>
+					    <input type="tel" name="phone" maxlength="12" onkeypress='validate(event)' id="phone" class="form-control" >
+					  </div>
+                      <div class="form-group">
+					    <label for="alt_phone">Other Phone</label>
+					    <input type="tel" name="alt-phone" maxlength="12" onkeypress='validate(event)' id="alt-phone" class="form-control" >
+					  </div>
+					  <div class="form-group">
+					  	<label for="message">Your Feedback</label>
+					  	<textarea name="message" id="message" class="form-control" placeholder="" rows="13"></textarea>
+					  </div>
+
+					  <button type="submit" name="submit" id="kontakt_btn" class="btn btn-theme">Submit</button>
+					</form>
+                        <div class="mail_alert">
+                        <div class="loading_spinner"></div>
+            <script>
+            $('#mail_form').submit(function(event) {
+
+
+                var name = $("#name").val()
+                var company_name = $("#company_name").val()
+                if(company_name) {} else{company_name ='Not Available';}
+                var email = $("#email").val()
+				var phone = $("#phone").val()
+                if(phone) {} else{phone ='Not Available';}
+                var alt_phone = $("#alt-phone").val()
+                if(alt_phone) {} else{alt_phone ='Not Available';}
+                var message = $("#message").val();
+
+
+                if(name && email && message){
+                    {
+						$.ajax({
+								type: "GET",
+								url: "http://concrete-tmt.appspot.com/feedback_request_update?name="+ name +"&companyName="+company_name +"&email="+ email + "&phone=" +phone+ "&altPhone=" + alt_phone + "&feedback="+ message ,
+								jsonp: "callback",
+								dataType: "json",
+								crossDomain: true,
+								beforeSend: function() { $( ".loading_spinner" ).html("Sending your request..."); },
+								success: function(data) {
+
+								$( ".loading_spinner" ).hide();
+
+								if(data.status=='ok'){ $('.mail_alert').html('<div style="color:#10752c;">Feedback has been sent. Our sales executive will contact you soon</div>');
+                                    alert("Your Feedback has been successfully sent");
+                                    window.location.href='index.html';
+}
+								},
+								error: function(){
+								alert("Problem found...");
+								}
+							});
+
+					}
+
+                } else {
+
+                    $('.mail_alert').html('<div style="color:#b20701;">Please fill all the required fields</div>');
+                }
+                event.preventDefault();
+            })
+            </script>
+
+                </div>
+			<br/>
+	 	</div>
+	 </div>
+
+
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/retina-1.1.0.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>
+	<script src="js/jquery.hoverex.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+  	<script src="js/jquery.isotope.min.js"></script>
+  	<script src="js/custom.js"></script>
+
+<!--      <script type='application/javascript' src='lib/jquery.mobile-1.4.5.min.js'></script>-->
+
+      <script type='text/javascript'>
+        $(window).load(function(){
+            $(document).ready(function(){
+
+                $.mobile.useFastClick = false;
+        });
+      </script>
+
+
+  </body>
+</html>

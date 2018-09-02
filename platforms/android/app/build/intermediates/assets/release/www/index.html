@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>CONCRETE TMT</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+      
+      
+    <script src="js/modernizr.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+      <style>
+      body
+{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+          
+          .btn-nav:hover{
+              filter:  invert(1);
+              -webkit-filter:  invert(1);
+              o-filter: invert(1);
+          }
+      
+      </style>
+     
+  </head>
+
+  <body >
+      
+      <!--Initial page loading -->
+      <div id="preloader">
+	<div id="status" >
+        <img  src="img/loading.gif" >
+    </div>
+</div>
+
+    <div class="navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+              <img  alt="Brand" src="img/header_image.png">
+          </a>
+            <div id="title-bottom"></div>
+        </div>
+        
+      </div>
+    </div>
+
+	<div id="headerwrap_index" >
+	    <div class="container" >
+			<div class="row">
+                
+                <p>
+                    <span id="offer_flash">
+                    <span style="color:white">
+                    
+
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_offer?type=html",
+//                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#offer_flash').html(data);
+                                    }
+                                                                        });			
+                                </script>   
+
+
+                    </span>
+                        </span>
+                       </p><br/>
+                
+                                <div class="col-lg-8">
+                                    <p> <span style="color:white" ><font size="4">"मजबूती ही हमारा विश्वास है"</font></span></p></br>
+				</div>
+                <br/>
+
+                      <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav"  style="margin-bottom:5px"><a title="Image 1" href="#" id="about"><img  src="img/icon_about_us.png"></a></div>
+                      <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 2" href="#" id="products"><img  src="img/icon_products.png"></a></div>
+                    
+                      <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 3" href="#" id="request_quote"><img  src="img/icon_quote.png"></a></div>
+                      <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 4" href="#" id="order"><img  src="img/icon_buy.png"></a></div>
+            <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 5" href="#" id="gallery"><img  src="img/icon_gallery.png"></a></div>
+
+                <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 8" href="#" id="dealers"><img  src="img/icon_dealers.png"></a></div>
+                      <div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 6" href="#" id="pricelist"><img  src="img/icon_pricelist.png"></a></div>
+    	<div class="col-lg-3 col-sm-4 col-xs-4 btn-nav" style="margin-bottom:5px"><a title="Image 7" href="#" id="feedback"><img  src="img/icon_feedback.png"></a></div>
+
+				
+			</div>
+	    </div> 
+	</div>
+
+		
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/retina-1.1.0.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>
+	<script src="js/jquery.hoverex.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+  	<script src="js/jquery.isotope.min.js"></script>
+  	<script src="js/custom.js"></script>
+
+
+    <script>
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+      
+       
+     
+      <script type='application/javascript' src='lib/jquery.mobile-1.4.5.min.js'></script>
+      
+      <script type='text/javascript'>
+        $(window).load(function(){
+            $(document).ready(function(){
+                
+                $("#status").fadeOut();
+	            $("#preloader").delay(350).fadeOut("slow"); 
+                
+                
+                $.mobile.useFastClick = false;
+                $('#about').bind('vclick',function(){
+                    window.location.href='about.html';
+                });
+                $('#gallery').bind('vclick',function(){
+                    window.location.href='gallery.html';
+                });
+                $('#contact').bind('vclick',function(){
+                    window.location.href='contact.html';
+                });
+                $('#products').bind('vclick',function(){
+                    window.location.href='products.html';
+                });
+                $('#request_quote').bind('vclick',function(){
+                    window.location.href='request.html';
+                });
+                $('#order').bind('vclick',function(){
+                    window.location.href='order.html';
+                });
+                $('#dealers').bind('vclick',function(){
+                    window.location.href='dealers.html';
+                });
+                $('#pricelist').bind('vclick',function(){
+                    window.location.href='pricing.html';
+                });
+                $('#feedback').bind('vclick',function(){
+                    window.location.href='feedback.html';
+                });
+            });
+        });
+      </script>
+      
+      
+  </body>
+</html>

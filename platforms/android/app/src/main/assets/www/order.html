@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Contact</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+      
+      <script src="plugins/jquery-1.10.2.min.js"></script>  
+
+    <script src="plugins/main.js"></script>    
+    <script src="cordova-1.5.0.js"></script>
+    <script type="text/javascript" src="plugins/monaca.viewport.js"></script>
+      
+    
+    <script src="js/modernizr.js"></script>
+      <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+      <script src="js/order.js"></script>
+      <script src="js/validation.js"></script>
+      <script src="js/number.js"></script>
+    
+      <style>
+          
+#frm1{
+margin: 10px;
+}          
+input[type=text]{
+
+width:100%;
+
+}
+input[type=submit]
+{
+margin-bottom: 20px;
+width:100%;
+padding: 15px;
+background-color: #4180C5;
+color: aliceblue;
+font-size:15px;
+cursor:pointer;
+}
+#submit:hover
+{
+background-color: black;
+}
+textarea{
+width:100%;
+padding: 15px;
+margin-top: 10px;
+border:1px solid #7ac9b7;
+border-radius:5px;
+margin-bottom: 20px;
+resize:none;
+}
+input[type=text]:focus,textarea:focus {
+border-color: #4697e4;
+}
+      
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+          
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+          
+          .loading_spinner {display:none; margin:0 auto 0 auto; width:128px;}
+.loading_spinner_all {display:none; margin:600px auto 0 auto; width:128px;}
+.loading_txt {font-family: oswald-light; font-size:48px; font-weight:bold; color:#261d1d; margin-top:20px; text-align:center;}
+          
+      </style>
+      
+  </head>
+
+  <body>
+      
+      
+      
+    <div class="navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="backBtn" href="javascript:history.back();"></a>
+          <a class="navbar-brand" href="index.html">
+              <img  alt="Brand" src="img/header_image.png">
+          </a>
+            <div id="title-bottom"></div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+
+
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>Place your order</h3>
+			</div>
+	    </div> 
+	</div>
+	 
+      
+                                <span id="8mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=8mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('8mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+                                
+                                <span id="10mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=10mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('10mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="12mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=12mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('12mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="16mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=16mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('16mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="20mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=20mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('20mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="25mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=25mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('25mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="28mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=28mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('28mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="32mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=32mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('32mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+                                      
+                                <span id="36mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=36mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('36mms',data);
+                                        
+                                      }
+                                    });		
+                                </script>   
+                                </span>
+      
+                                <span id="40mms" >
+                                    
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=40mm&type=plain",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                        window.sessionStorage.setItem('40mms',data);
+                                        
+                                       }
+                                    });		
+                                </script>   
+                                </span>
+
+      <div class="container" style="background-color:white">
+         <br/>
+	 	<div class="row">
+           <div class="col-lg-6">
+ 
+      <form id="mail_form" role="form">
+          <h6 id="net" style="color:red"><b>
+                                <script type="text/javascript">						
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=36mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    error: function(){
+                                    $('#net').html(" * connect internet to calculate the prices");
+                                    }
+                                    });			
+                                </script>
+                                    </b>
+          </h6>
+<h4>Fill the Quantity needed</h4>
+		 		<div class="hline"></div>
+<table class="table" border="">
+  <tr>
+    <th>Size</th>
+    <th>Weight(MT)</th>
+    <th>Price(Rs)</th>
+  </tr>
+    
+  <tr>
+    <td>8mm</td>
+    <td ><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="8mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('8mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="8mm_tmt_cost" value="0" disabled></span></td>
+  </tr>
+  <tr>
+    <td>10mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="10mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('10mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="10mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>12mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="12mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('12mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="12mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>16mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="16mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('16mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="16mm_tmt_cost" value="0" disabled></td>
+  <tr>
+    <td>20mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="20mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('20mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="20mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>25mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="25mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('25mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="25mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>28mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="28mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('28mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="28mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>32mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="32mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('32mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="32mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>36mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="36mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('36mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="36mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td>40mm</td>
+    <td><input type="number" min="0" max="99999999" maxlength="4" onkeypress='validate(event)' style="text-align: center" id="40mm_tmt" placeholder="0" value="" onChange="concrete_tmt_func('40mm_tmt')"></td>
+    <td><input type="text" style="text-align: center" id="40mm_tmt_cost" value="0" disabled></td>
+  </tr>
+  <tr>
+    <td><span id="demo" onclick="myTotal()"><h4>Total</h4></span></td>
+      <td><input type="number" min="0" max="99999999" style="text-align: center" id="kgs" value="0" disabled></td>
+      <td><input type="text" style="text-align: center" id="sizet_rods_price" value="0" disabled></span></td>
+  </tr>
+  
+    </table>
+
+
+	
+<h4>Fill your details</h4>
+		 			<div class="hline"></div>
+					  <div class="form-group">
+					    <label for="name">Name</label>
+					    <input type="text" name="name" id="name"  class="form-control"  value="">
+					  </div>
+                      <div class="form-group">
+					    <label for="company_name">Organization</label>
+					    <input type="text" name="company_name" id="company_name"  class="form-control" value="" >
+					  </div>
+					  <div class="form-group">
+					    <label for="email">Email</label>
+					    <input type="email" name="email" id="email" onChange="validate_email()" class="form-control" value=""><span id="email_span"></span>
+					  </div>
+                      
+					  <div class="form-group">
+					    <label for="phone">Phone</label>
+					    <input type="tel" name="phone" maxlength="12" onkeypress='validate(event)' id="phone" class="form-control" value="">
+					  </div>
+                      <div class="form-group">
+					    <label for="alt_phone">Other Phone</label>
+					    <input type="tel" name="alt-phone" maxlength="12" onkeypress='validate(event)' id="alt-phone" class="form-control" value="">
+					  </div>
+					  <div class="form-group">
+					  	<label for="message">Comments</label>
+					  	<textarea name="message" id="message" class="form-control" placeholder="" rows="13" value=""></textarea>
+					  </div>
+                    
+					  <button type="submit" name="submit" id="kontakt_btn" class="btn btn-theme">Submit</button>
+					</form>
+                        <div class="mail_alert">
+                        <div class="loading_spinner"></div>
+                        <!--mail JS code -->
+            <script>
+            $('#mail_form').off('submit').on('submit',function(event) {
+                alert("Do you want to continue?");
+                //the MT rods
+                var final_8 = $("#8mm_tmt").val()
+                if(final_8) {} else{final_8 =0;}
+                var final_10 = $("#10mm_tmt").val()
+                if(final_10) {} else{final_10 =0;}
+                var final_12 = $("#12mm_tmt").val()
+                if(final_12) {} else{final_12 =0;}
+                
+                var final_16 = $("#16mm_tmt").val()
+                if(final_16) {} else{final_16 =0;}
+                var final_20 = $("#20mm_tmt").val()
+                if(final_20) {} else{final_20 =0;}
+                var final_25 = $("#25mm_tmt").val()
+                if(final_25) {} else{final_25 =0;}
+                
+                var final_28 = $("#28mm_tmt").val()
+                if(final_28) {} else{final_28 =0;}
+                var final_32 = $("#32mm_tmt").val()
+                if(final_32) {} else{final_32 =0;}
+                var final_36 = $("#36mm_tmt").val()
+                if(final_36) {} else{final_36 =0;}
+                var final_40 = $("#40mm_tmt").val()
+                if(final_40) {} else{final_40 =0;}
+                                                 
+                
+                var name = $("#name").val()
+                var company_name = $("#company_name").val()
+                if(company_name) {} else{company_name ='Not Available';}
+                var email = $("#email").val()
+				var phone = $("#phone").val()
+                if(phone) {} else{phone ='Not Available';}
+                var alt_phone = $("#alt-phone").val()
+                if(alt_phone) {} else{alt_phone ='Not Available';}
+                var message = $("#message").val();
+                var product_vals = final_8+'-'+final_10+'-'+final_12+'-'+final_16+'-'+final_20+'-'+final_25+'-'+final_28+'-'+final_32 +'-'+final_36+'-'+final_40;
+                
+								               
+                if(name && email && message){
+                     
+						
+						$.ajax({
+								type: "GET",
+								url: "http://concrete-tmt.appspot.com/product_request_update?name="+ name +"&companyName="+company_name +"&email="+ email + "&phone=" +phone+ "&altPhone=" + alt_phone + "&message="+ message  +"&products=" + product_vals,
+								jsonp: "callback",
+								dataType: "json",
+								crossDomain: true,
+								beforeSend: function() { $( ".loading_spinner" ).html("Placing your order..."); },
+								success: function(data) {
+									
+								$( ".loading_spinner" ).hide();
+							
+								if(data.status=='ok'){ 
+                                    $('.mail_alert').html('<div style="color:#10752c;">Order has been successfully placed.</div>'); 
+                                    alert("Your request has been successfully placed");
+                                    window.location.href='index.html';
+
+                                    }
+								},
+								error: function(){
+								alert("Problem found...");
+								}
+							});
+						
+					
+						
+                } else {
+                                    
+                    $('.mail_alert').html('<div style="color:#b20701;">Fill in all required fields</div>');									
+                }
+                event.preventDefault();
+            })		
+            </script>
+                            
+                </div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	 	</div>
+	 </div>
+
+
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/retina-1.1.0.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>
+	<script src="js/jquery.hoverex.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+  	<script src="js/jquery.isotope.min.js"></script>
+  	<script src="js/custom.js"></script>
+
+
+
+
+<!--      <script type='application/javascript' src='lib/jquery.mobile-1.4.5.min.js'></script>-->
+      
+      <script type='text/javascript'>
+        $(window).load(function(){
+            $(document).ready(function(){
+                
+                $.mobile.useFastClick = false;
+
+            });
+        });
+      </script>
+    
+
+  </body>
+</html>

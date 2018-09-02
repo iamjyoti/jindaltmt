@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Pricing</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="plugins/jquery-1.10.2.min.js"></script>
+    <script src="plugins/main.js"></script>
+    <script src="js/cordova-1.5.js"></script>
+    <script type="text/javascript" src="plugins/monaca.viewport.js"></script>
+
+    <script src="js/modernizr.js"></script>
+
+  </head>
+
+  <body >
+
+      <div id="preloader">
+	<div id="status">
+                <img  src="img/loading.gif" >
+
+    </div>
+</div>
+
+    <div class="navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+           <a class="backBtn" id="backButton" href="#"></a>
+         <a class="navbar-brand" id="backButton" href="#">
+              <img  alt="Brand" src="img/header_image.png">
+
+            </a>
+            <div id="title-bottom"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+	 <div class="container" style="background-color:white">
+
+	 	<div class="row">
+            <br/>
+            <br/>
+
+					<ul class="popular-posts">
+                        <h4>Pricing:</h4>
+
+                                <h6 id="net" style="color:red"><b>
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=8mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+
+                                    error: function(){
+                                    $('#net').html(" connect to the internet to get latest prices");
+                                    }
+                                    });
+                                </script>
+                                    </b>
+                                </h6>
+
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">8mm bars</a></h5>
+                            <span class="badge badge-theme">
+                                Rs
+                                <span id="8mms" >
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=8mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#8mms').html(data);}
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">10mm bars</a></h5>
+		                    <span class="badge badge-theme">
+                                Rs
+
+                                <span id="10mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=10mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#10mms').html(data);}
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+                            </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">12mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="16mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=12mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#16mms').html(data);}
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">16mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="18mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=16mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#18mms').html(data);}
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+                        <li>
+		                    <h5><a href="#" style="font-weight:bold">20mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="20mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=20mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#20mms').html(data);
+
+                                    }
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">25mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="25mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=25mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#25mms').html(data);
+
+                                    }
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+                            </li>
+                        <li>
+		                    <h5><a href="#" style="font-weight:bold">28mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="28mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=28mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "text",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#28mms').html(data);}
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">32mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="32mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=32mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#32mms').html(data);
+
+                                    }
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">36mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="36mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=36mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#36mms').html(data);
+
+                                    }
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		                <li>
+		                    <h5><a href="#" style="font-weight:bold">40mm bars</a></h5>
+
+                            <span class="badge badge-theme">
+                                Rs
+
+                                <span id="40mms">
+                                    ---
+                                <script type="text/javascript">
+
+                                    $.ajax({
+                                    type: "GET",
+                                    url: "http://concrete-tmt.appspot.com/get_product_detail?name=40mm&type=html",
+                                    jsonp: "callback",
+                                    dataType: "html",
+                                    crossDomain: true,
+                                    success: function(data) {
+                                    $('#40mms').html(data);
+
+                                    }
+                                    });
+                                </script>
+                                </span>
+                                /Metric Tons
+                            </span>
+		                    </li>
+		            </ul>
+
+
+
+             <h6 style="color:black"><p style="margin-left:1em;">* Note: The above rates are the basic rates excluding loading, insurance and taxes.</p></h6>
+            <h6 style="color:black"><p style="margin-left:1em;">  Loading : 115/MT</p></h6>
+            <h6 style="color:black"> <p style="margin-left:1em;"> Insurance : 20/MT</p></h6>
+            <h6 style="color:black"><p style="margin-left:1em;">  Taxes :</p> </h6>
+            <h6 style="color:black"><p style="margin-left:1em;"> 1. Excise duty @ 12.5%</p></h6>
+            <h6 style="color:black"> <p style="margin-left:1em;"> 2. Local VAT @ 4 % or CST @ 2% against C-form.
+      Or 5% without C-form.</p></h6>
+
+            <br/>
+	 	</div>
+	 </div>
+
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/retina-1.1.0.js"></script>
+	<script src="js/jquery.hoverdir.js"></script>
+	<script src="js/jquery.hoverex.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+  	<script src="js/jquery.isotope.min.js"></script>
+  	<script src="js/custom.js"></script>
+
+
+
+      <script type='application/javascript' src='lib/jquery.mobile-1.4.5.min.js'></script>
+
+      <script type='text/javascript'>
+        $(window).load(function(){
+          window._cordovaNative = true;
+            $(document).ready(function(){
+
+                $("#status").fadeOut();
+	            $("#preloader").delay(350).fadeOut("slow");
+
+                $.mobile.useFastClick = false;
+            });
+        });
+      </script>
+
+
+  </body>
+</html>
